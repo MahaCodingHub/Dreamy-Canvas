@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Login | Maha Malik Artwork</title>
+
+<link rel="stylesheet" href="../style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:
+linear-gradient(rgba(15,15,25,.75),
+rgba(15,15,25,.75)),
+url("../heroimg.png") center/cover;
+
+}
+
+.login-box{
+
+width:420px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+padding:45px;
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:0 15px 45px rgba(0,0,0,.45);
+
+text-align:center;
+
+}
+
+.login-box img{
+
+width:90px;
+
+margin-bottom:15px;
+
+}
+
+.login-box h2{
+
+color:#fff;
+
+font-size:32px;
+
+margin-bottom:10px;
+
+}
+
+.login-box p{
+
+color:#d8d8d8;
+
+margin-bottom:35px;
+
+font-size:15px;
+
+}
+
+.input-box{
+
+position:relative;
+
+margin-bottom:22px;
+
+}
+
+.input-box i{
+
+position:absolute;
+
+left:18px;
+
+top:17px;
+
+color:#d4af37;
+
+}
+
+.input-box input{
+
+width:100%;
+
+padding:15px 15px 15px 48px;
+
+border:none;
+
+outline:none;
+
+border-radius:12px;
+
+background:rgba(255,255,255,.12);
+
+color:#fff;
+
+font-size:15px;
+
+}
+
+.input-box input::placeholder{
+
+color:#ddd;
+
+}
+
+.login-btn{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:12px;
+
+background:#d4af37;
+
+color:#111;
+
+font-size:17px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.login-btn:hover{
+
+background:#f3d86c;
+
+transform:translateY(-3px);
+
+}
+
+.back-home{
+
+display:inline-block;
+
+margin-top:25px;
+
+color:#ddd;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.back-home:hover{
+
+color:#d4af37;
+
+}
+
+.error{
+
+margin-top:18px;
+
+color:#ff8b8b;
+
+font-size:14px;
+
+display:none;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+<img src="../logo.png" alt="Logo">
+
+<h2>Admin Panel</h2>
+
+<p>Maha Malik Artwork Studio</p>
+
+<form id="loginForm">
+
+<div class="input-box">
+
+<i class="fas fa-user"></i>
+
+<input
+type="text"
+id="username"
+placeholder="Username"
+required>
+
+</div>
+
+<div class="input-box">
+
+<i class="fas fa-lock"></i>
+
+<input
+type="password"
+id="password"
+placeholder="Password"
+required>
+
+</div>
+
+<button class="login-btn">
+
+Login
+
+</button>
+
+</form>
+
+<p class="error" id="error">
+
+Invalid username or password.
+
+</p>
+
+<a href="../index.html" class="back-home">
+
+← Back to Website
+
+</a>
+
+</div>
+
+<script>
+
+document.getElementById("loginForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const username=document.getElementById("username").value;
+
+const password=document.getElementById("password").value;
+
+if(username==="admin" && password==="12345"){
+
+window.location.href="dashboard.html";
+
+}
+
+else{
+
+document.getElementById("error").style.display="block";
+
+}
+
+});
+
+</script>
+
+</body>
+
+</html>
