@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | Maha Malik Artwork Admin</title>
+
+    <!-- General Admin CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+                    SIDEBAR
+=================================================== -->
+
+<aside class="sidebar">
+
+    <!-- LOGO -->
+
+    <div class="logo">
+
+        <img
+            src="../logo.png"
+            alt="Maha Malik Artwork Logo"
+        >
+
+        <h2>Maha Malik</h2>
+
+        <p>Artwork Studio</p>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <ul>
+
+        <li>
+
+            <a href="dashboard.html">
+
+                <i class="fas fa-chart-line"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="paintings.html">
+
+                <i class="fas fa-image"></i>
+
+                <span>Paintings</span>
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="add-painting.html">
+
+                <i class="fas fa-plus-circle"></i>
+
+                <span>Add Painting</span>
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="orders.html">
+
+                <i class="fas fa-shopping-cart"></i>
+
+                <span>Orders</span>
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="messages.html">
+
+                <i class="fas fa-envelope"></i>
+
+                <span>Messages</span>
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="users.html">
+
+                <i class="fas fa-users"></i>
+
+                <span>Customers</span>
+
+            </a>
+
+        </li>
+
+
+        <li class="active">
+
+            <a href="settings.html">
+
+                <i class="fas fa-cog"></i>
+
+                <span>Settings</span>
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="login.html">
+
+                <i class="fas fa-sign-out-alt"></i>
+
+                <span>Logout</span>
+
+            </a>
+
+        </li>
+
+    </ul>
+
+</aside>
+
+
+
+<!-- ==================================================
+                    MAIN CONTENT
+=================================================== -->
+
+<main class="main">
+
+
+    <!-- ==================================================
+                        TOP BAR
+    =================================================== -->
+
+    <div class="topbar">
+
+        <div class="topbar-left">
+
+            <h1>Website Settings</h1>
+
+            <p>
+                Manage your artwork studio information and social links.
+            </p>
+
+        </div>
+
+
+        <div class="admin-profile">
+
+            <i class="fas fa-bell"></i>
+
+            <img
+                src="../logo.png"
+                alt="Admin"
+            >
+
+            <div class="admin-name">
+
+                <h3>Admin</h3>
+
+                <p>Artwork Studio</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==================================================
+                    SETTINGS SECTION
+=================================================== -->
+
+    <section class="section settings-page">
+
+
+        <div class="section-title">
+
+            <div>
+
+                <h2>Studio Information</h2>
+
+                <p>
+                    Update the information displayed on your website.
+                </p>
+
+            </div>
+
+            <div class="settings-icon">
+
+                <i class="fas fa-sliders"></i>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================================================
+                        SETTINGS FORM
+        =================================================== -->
+
+        <form id="settingsForm" class="settings-form">
+
+
+            <!-- WEBSITE NAME -->
+
+            <div class="form-group">
+
+                <label for="websiteName">
+
+                    <i class="fas fa-globe"></i>
+
+                    Website Name
+
+                </label>
+
+                <input
+                    type="text"
+                    id="websiteName"
+                    value="Maha Malik Artwork Studio"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- OWNER NAME -->
+
+            <div class="form-group">
+
+                <label for="ownerName">
+
+                    <i class="fas fa-user"></i>
+
+                    Owner Name
+
+                </label>
+
+                <input
+                    type="text"
+                    id="ownerName"
+                    value="Maha Malik"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- EMAIL -->
+
+            <div class="form-group">
+
+                <label for="email">
+
+                    <i class="fas fa-envelope"></i>
+
+                    Email Address
+
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    value="your@email.com"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- PHONE -->
+
+            <div class="form-group">
+
+                <label for="phone">
+
+                    <i class="fas fa-phone"></i>
+
+                    Phone Number
+
+                </label>
+
+                <input
+                    type="text"
+                    id="phone"
+                    placeholder="+92XXXXXXXXXX"
+                >
+
+            </div>
+
+
+
+            <!-- YOUTUBE -->
+
+            <div class="form-group">
+
+                <label for="youtube">
+
+                    <i class="fab fa-youtube"></i>
+
+                    YouTube Channel
+
+                </label>
+
+                <input
+                    type="url"
+                    id="youtube"
+                    placeholder="https://youtube.com/..."
+                >
+
+            </div>
+
+
+
+            <!-- INSTAGRAM -->
+
+            <div class="form-group">
+
+                <label for="instagram">
+
+                    <i class="fab fa-instagram"></i>
+
+                    Instagram
+
+                </label>
+
+                <input
+                    type="url"
+                    id="instagram"
+                    placeholder="https://instagram.com/..."
+                >
+
+            </div>
+
+
+
+            <!-- FACEBOOK -->
+
+            <div class="form-group">
+
+                <label for="facebook">
+
+                    <i class="fab fa-facebook"></i>
+
+                    Facebook
+
+                </label>
+
+                <input
+                    type="url"
+                    id="facebook"
+                    placeholder="https://facebook.com/..."
+                >
+
+            </div>
+
+
+
+            <!-- ADDRESS -->
+
+            <div class="form-group full-width">
+
+                <label for="address">
+
+                    <i class="fas fa-location-dot"></i>
+
+                    Studio Address
+
+                </label>
+
+                <textarea
+                    id="address"
+                    rows="5"
+                    placeholder="Enter Studio Address"
+                ></textarea>
+
+            </div>
+
+
+
+            <!-- FORM ACTIONS -->
+
+            <div class="settings-actions">
+
+                <button
+                    type="submit"
+                    class="save-btn"
+                >
+
+                    <i class="fas fa-save"></i>
+
+                    Save Settings
+
+                </button>
+
+
+                <button
+                    type="reset"
+                    class="cancel-btn"
+                >
+
+                    <i class="fas fa-rotate-left"></i>
+
+                    Reset
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ==================================================
+                    JAVASCRIPT
+=================================================== -->
+
+<script src="settings.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Paintings | Maha Malik Artwork Studio</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+
+<!-- ==================================================
+     SIDEBAR
+================================================== -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <div class="logo-mark">
+            <i class="fas fa-palette"></i>
+        </div>
+
+        <h2>Maha Malik</h2>
+
+        <p>ARTWORK STUDIO</p>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <ul>
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="paintings.html">
+                    <i class="fas fa-image"></i>
+                    <span>Paintings</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="orders.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Orders</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="messages.html">
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="users.html">
+                    <i class="fas fa-users"></i>
+                    <span>Customers</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="settings.html">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <div class="sidebar-footer">
+
+        <i class="fas fa-paint-brush"></i>
+
+        <span>Creative Admin</span>
+
+    </div>
+
+</aside>
+
+
+
+<!-- ==================================================
+     MAIN CONTENT
+================================================== -->
+
+<main class="main">
+
+
+    <!-- ==================================================
+         PAGE HEADER
+    ================================================== -->
+
+    <header class="paintings-header">
+
+        <div class="header-content">
+
+            <div class="header-title">
+
+                <span class="page-label">
+                    ARTWORK STUDIO
+                </span>
+
+                <h1>
+                    Painting Management
+                </h1>
+
+                <p>
+                    Manage, organize and update your artwork collection.
+                </p>
+
+            </div>
+
+
+            <a
+                href="add-painting.html"
+                class="add-btn"
+            >
+
+                <i class="fas fa-plus"></i>
+
+                <span>Add New Painting</span>
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         PAINTING SECTION
+    ================================================== -->
+
+    <section class="painting-section">
+
+
+        <!-- SECTION HEADING -->
+
+        <div class="section-heading">
+
+            <div>
+
+                <h2>
+                    Your Paintings
+                </h2>
+
+                <p>
+                    View and manage all paintings in your collection.
+                </p>
+
+            </div>
+
+
+            <div class="painting-count">
+
+                <i class="fas fa-images"></i>
+
+                <span id="paintingCount">
+                    Paintings
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             TOOLBAR
+        ================================================== -->
+
+        <div class="painting-toolbar">
+
+
+            <div class="search-box">
+
+                <i class="fas fa-search"></i>
+
+                <input
+                    type="text"
+                    id="searchPainting"
+                    placeholder="Search paintings by title..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <div class="toolbar-info">
+
+                <i class="fas fa-info-circle"></i>
+
+                <span>
+                    Edit or delete paintings using the actions.
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             TABLE
+        ================================================== -->
+
+        <div class="table-container">
+
+            <table class="paintings-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Preview</th>
+
+                        <th>Painting</th>
+
+                        <th>Category</th>
+
+                        <th>Medium</th>
+
+                        <th>Status</th>
+
+                        <th>Actions</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="paintingTable">
+
+                    <tr>
+
+                        <td
+                            colspan="7"
+                            class="loading-cell"
+                        >
+
+                            <div class="loading-content">
+
+                                <i class="fas fa-spinner fa-spin"></i>
+
+                                <span>
+                                    Loading paintings...
+                                </span>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<script src="paintings.js"></script>
+
+</body>
+
+</html>

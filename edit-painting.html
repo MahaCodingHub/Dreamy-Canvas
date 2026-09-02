@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Edit Painting | Admin</title>
+
+<link rel="stylesheet" href="../style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body class="admin-body">
+
+<!-- ================= HEADER ================= -->
+
+<header class="admin-header">
+
+    <h2>Edit Painting</h2>
+
+    <a href="paintings.html" class="admin-btn">
+        ← Back
+    </a>
+
+</header>
+
+
+<!-- ================= FORM ================= -->
+
+<div class="admin-container">
+
+<form id="editPaintingForm" class="admin-form">
+
+
+<!-- PAINTING TITLE -->
+
+<div class="form-group">
+
+<label for="title">Painting Title</label>
+
+<input
+    type="text"
+    id="title"
+    required>
+
+</div>
+
+
+<!-- CATEGORY -->
+
+<div class="form-group">
+
+<label for="category">Category</label>
+
+<select id="category" required>
+
+    <option value="">Select Category</option>
+
+    <option value="1">Landscape</option>
+
+    <option value="2">Nature</option>
+
+    <option value="3">Architecture</option>
+
+    <option value="4">Fantasy</option>
+
+    <option value="5">Portrait</option>
+
+    <option value="6">Abstract</option>
+
+</select>
+
+</div>
+
+
+<!-- MEDIUM -->
+
+<div class="form-group">
+
+<label for="medium">Medium</label>
+
+<input
+    type="text"
+    id="medium"
+    required>
+
+</div>
+
+
+<!-- SIZE -->
+
+<div class="form-group">
+
+<label for="size">Size</label>
+
+<input
+    type="text"
+    id="size"
+    required>
+
+</div>
+
+
+<!-- PRICE -->
+
+<div class="form-group">
+
+<label for="price">Price</label>
+
+<input
+    type="number"
+    id="price"
+    step="0.01"
+    min="0"
+    required>
+
+</div>
+
+
+<!-- STATUS -->
+
+<div class="form-group">
+
+<label for="status">Status</label>
+
+<select id="status" required>
+
+    <option value="available">Available</option>
+
+    <option value="sold">Sold</option>
+
+    <option value="reserved">Reserved</option>
+
+</select>
+
+</div>
+
+
+<!-- IMAGE -->
+
+<div class="form-group">
+
+<label for="image">Image URL / File Name</label>
+
+<input
+    type="text"
+    id="image"
+    placeholder="art10.jpeg">
+
+</div>
+
+
+<!-- DESCRIPTION -->
+
+<div class="form-group">
+
+<label for="description">Description</label>
+
+<textarea
+    id="description"
+    rows="4"></textarea>
+
+</div>
+
+
+<!-- STORY -->
+
+<div class="form-group">
+
+<label for="story">Story</label>
+
+<textarea
+    id="story"
+    rows="6"></textarea>
+
+</div>
+
+
+<!-- UPDATE BUTTON -->
+
+<button
+    type="submit"
+    class="admin-save">
+
+    <i class="fas fa-save"></i>
+
+    Update Painting
+
+</button>
+
+</form>
+
+</div>
+
+
+<script src="edit-painting.js"></script>
+
+</body>
+
+</html>

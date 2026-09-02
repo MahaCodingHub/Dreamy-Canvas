@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard | Maha Malik Artwork</title>
+
+
+    <!-- ==========================================
+         DASHBOARD CSS
+    =========================================== -->
+
+    <link rel="stylesheet" href="dashboard.css">
+
+
+    <!-- ==========================================
+         GOOGLE FONTS
+    =========================================== -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- ==========================================
+         FONT AWESOME
+    =========================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     SIDEBAR
+=================================================== -->
+
+<aside class="sidebar">
+
+
+    <!-- LOGO -->
+
+    <div class="logo">
+
+        <img
+            src="../logo.png"
+            alt="Maha Malik Artwork Studio Logo"
+        >
+
+        <h2>Maha Malik</h2>
+
+        <p>Artwork Studio</p>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <ul>
+
+
+        <!-- DASHBOARD -->
+
+        <li class="active">
+
+            <a href="dashboard.html">
+
+                <i class="fas fa-chart-line"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+        </li>
+
+
+        <!-- PAINTINGS -->
+
+        <li>
+
+            <a href="paintings.html">
+
+                <i class="fas fa-image"></i>
+
+                <span>Paintings</span>
+
+            </a>
+
+        </li>
+
+
+        <!-- ADD PAINTING -->
+
+        <li>
+
+            <a href="add-painting.html">
+
+                <i class="fas fa-plus-circle"></i>
+
+                <span>Add Painting</span>
+
+            </a>
+
+        </li>
+
+
+        <!-- ORDERS -->
+
+        <li>
+
+            <a href="orders.html">
+
+                <i class="fas fa-shopping-cart"></i>
+
+                <span>Orders</span>
+
+            </a>
+
+        </li>
+
+
+        <!-- MESSAGES -->
+
+        <li>
+
+            <a href="messages.html">
+
+                <i class="fas fa-envelope"></i>
+
+                <span>Messages</span>
+
+            </a>
+
+        </li>
+
+
+        <!-- CUSTOMERS -->
+
+        <li>
+
+            <a href="users.html">
+
+                <i class="fas fa-users"></i>
+
+                <span>Customers</span>
+
+            </a>
+
+        </li>
+
+
+        <!-- SETTINGS -->
+
+        <li>
+
+            <a href="settings.html">
+
+                <i class="fas fa-cog"></i>
+
+                <span>Settings</span>
+
+            </a>
+
+        </li>
+
+
+        <!-- LOGOUT -->
+
+        <li>
+
+            <a href="login.html">
+
+                <i class="fas fa-sign-out-alt"></i>
+
+                <span>Logout</span>
+
+            </a>
+
+        </li>
+
+
+    </ul>
+
+</aside>
+
+
+
+<!-- ==================================================
+     MAIN CONTENT
+=================================================== -->
+
+<main class="main">
+
+
+    <!-- ==================================================
+         TOPBAR
+    =================================================== -->
+
+    <div class="topbar">
+
+
+        <!-- PAGE TITLE -->
+
+        <div>
+
+            <h1>Dashboard</h1>
+
+            <p id="greeting">
+                Welcome back, Admin
+            </p>
+
+        </div>
+
+
+        <!-- ADMIN PROFILE -->
+
+        <div class="admin-profile">
+
+            <i
+                class="fas fa-bell"
+                id="bell"
+                title="Notifications"
+            ></i>
+
+            <img
+                src="../logo.png"
+                alt="Admin Profile"
+            >
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ==================================================
+         STATISTICS
+    =================================================== -->
+
+    <div class="cards">
+
+
+        <!-- TOTAL PAINTINGS -->
+
+        <div class="card">
+
+            <div class="icon">
+
+                <i class="fas fa-palette"></i>
+
+            </div>
+
+            <div>
+
+                <h2 id="paintingCount">0</h2>
+
+                <p>Total Paintings</p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ORDERS -->
+
+        <div class="card">
+
+            <div class="icon">
+
+                <i class="fas fa-shopping-bag"></i>
+
+            </div>
+
+            <div>
+
+                <h2 id="orderCount">0</h2>
+
+                <p>Orders</p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- MESSAGES -->
+
+        <div class="card">
+
+            <div class="icon">
+
+                <i class="fas fa-envelope"></i>
+
+            </div>
+
+            <div>
+
+                <h2 id="messageCount">0</h2>
+
+                <p>Messages</p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CUSTOMERS -->
+
+        <div class="card">
+
+            <div class="icon">
+
+                <i class="fas fa-users"></i>
+
+            </div>
+
+            <div>
+
+                <h2 id="customerCount">0</h2>
+
+                <p>Customers</p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ==================================================
+         QUICK ACTIONS
+    =================================================== -->
+
+    <section class="section">
+
+
+        <h2>Quick Actions</h2>
+
+
+        <div class="actions">
+
+
+            <!-- ADD PAINTING -->
+
+            <a
+                href="add-painting.html"
+                class="action-btn"
+            >
+
+                <i class="fas fa-plus"></i>
+
+                <span>Add Painting</span>
+
+            </a>
+
+
+
+            <!-- MANAGE GALLERY -->
+
+            <a
+                href="paintings.html"
+                class="action-btn"
+            >
+
+                <i class="fas fa-image"></i>
+
+                <span>Manage Gallery</span>
+
+            </a>
+
+
+
+            <!-- ORDERS -->
+
+            <a
+                href="orders.html"
+                class="action-btn"
+            >
+
+                <i class="fas fa-shopping-cart"></i>
+
+                <span>View Orders</span>
+
+            </a>
+
+
+
+            <!-- MESSAGES -->
+
+            <a
+                href="messages.html"
+                class="action-btn"
+            >
+
+                <i class="fas fa-comments"></i>
+
+                <span>Customer Messages</span>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         RECENT ACTIVITY
+    =================================================== -->
+
+    <section class="section">
+
+
+        <h2>Recent Activity</h2>
+
+
+        <div class="dashboard-table">
+
+
+            <table>
+
+
+                <thead>
+
+                    <tr>
+
+                        <th>Date</th>
+
+                        <th>Activity</th>
+
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+
+                    <tr>
+
+                        <td>Today</td>
+
+                        <td>Admin Logged In</td>
+
+                        <td>
+
+                            <span class="success">
+                                Success
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>Yesterday</td>
+
+                        <td>Painting Added</td>
+
+                        <td>
+
+                            <span class="success">
+                                Completed
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>2 Days Ago</td>
+
+                        <td>Gallery Updated</td>
+
+                        <td>
+
+                            <span class="success">
+                                Completed
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>3 Days Ago</td>
+
+                        <td>Website Backup</td>
+
+                        <td>
+
+                            <span class="pending">
+                                Pending
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+
+
+            </table>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ==================================================
+     DASHBOARD JAVASCRIPT
+=================================================== -->
+
+<script src="dashboard.js"></script>
+
+
+</body>
+
+</html>

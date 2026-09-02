@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Orders | Maha Malik Artwork Admin</title>
+
+    <!-- General Admin CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+                    SIDEBAR
+=================================================== -->
+
+<aside class="sidebar">
+
+    <!-- LOGO -->
+
+    <div class="logo">
+
+        <img
+            src="../logo.png"
+            alt="Maha Malik Artwork Logo"
+        >
+
+        <h2>Maha Malik</h2>
+
+        <p>Artwork Studio</p>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <ul>
+
+        <li>
+
+            <a href="dashboard.html">
+
+                <i class="fas fa-chart-line"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="paintings.html">
+
+                <i class="fas fa-image"></i>
+
+                <span>Paintings</span>
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="add-painting.html">
+
+                <i class="fas fa-plus-circle"></i>
+
+                <span>Add Painting</span>
+
+            </a>
+
+        </li>
+
+
+        <li class="active">
+
+            <a href="orders.html">
+
+                <i class="fas fa-shopping-cart"></i>
+
+                <span>Orders</span>
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="messages.html">
+
+                <i class="fas fa-envelope"></i>
+
+                <span>Messages</span>
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="users.html">
+
+                <i class="fas fa-users"></i>
+
+                <span>Customers</span>
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="settings.html">
+
+                <i class="fas fa-cog"></i>
+
+                <span>Settings</span>
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="login.html">
+
+                <i class="fas fa-sign-out-alt"></i>
+
+                <span>Logout</span>
+
+            </a>
+
+        </li>
+
+    </ul>
+
+</aside>
+
+
+
+<!-- ==================================================
+                    MAIN CONTENT
+=================================================== -->
+
+<main class="main">
+
+
+    <!-- ==================================================
+                        TOP BAR
+    =================================================== -->
+
+    <div class="topbar">
+
+        <div class="topbar-left">
+
+            <h1>Customer Orders</h1>
+
+            <p>
+                View and manage all artwork orders.
+            </p>
+
+        </div>
+
+
+        <div class="admin-profile">
+
+            <i class="fas fa-bell"></i>
+
+            <img
+                src="../logo.png"
+                alt="Admin"
+            >
+
+            <div class="admin-name">
+
+                <h3>Admin</h3>
+
+                <p>Artwork Studio</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==================================================
+                        ORDER SECTION
+    =================================================== -->
+
+    <section class="section">
+
+
+        <!-- SECTION HEADER -->
+
+        <div class="section-title">
+
+            <div>
+
+                <h2>Order Management</h2>
+
+                <p class="section-subtitle">
+                    Track payments and order status
+                </p>
+
+            </div>
+
+
+            <div class="order-count">
+
+                <i class="fas fa-shopping-bag"></i>
+
+                <span id="orderCount">
+                    3 Orders
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================================================
+                        SEARCH
+    =================================================== -->
+
+        <div class="order-toolbar">
+
+            <div class="order-search">
+
+                <i class="fas fa-search"></i>
+
+                <input
+                    type="text"
+                    id="searchOrder"
+                    placeholder="Search by order, customer or painting..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================================================
+                        ORDERS TABLE
+    =================================================== -->
+
+        <div class="table-container">
+
+            <table class="orders-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Order ID
+                        </th>
+
+                        <th>
+                            Customer
+                        </th>
+
+                        <th>
+                            Painting
+                        </th>
+
+                        <th>
+                            Country
+                        </th>
+
+                        <th>
+                            Payment
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                        <th>
+                            Actions
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="orderTable">
+
+
+                    <!-- ORDER 1 -->
+
+                    <tr>
+
+                        <td>
+
+                            <strong class="order-id">
+                                #1001
+                            </strong>
+
+                        </td>
+
+
+                        <td>
+
+                            <div class="customer-info">
+
+                                <div class="customer-avatar">
+                                    AK
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Ali Khan
+                                    </strong>
+
+                                    <small>
+                                        Customer
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+
+                        <td>
+
+                            <span class="painting-name">
+                                Moonlit Path
+                            </span>
+
+                        </td>
+
+
+                        <td>
+                            Pakistan
+                        </td>
+
+
+                        <td>
+
+                            <span class="payment-method">
+                                <i class="fas fa-wallet"></i>
+                                JazzCash
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <span class="order-status pending-status">
+                                Pending
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <div class="order-actions">
+
+                                <button
+                                    class="view-btn"
+                                    type="button"
+                                >
+
+                                    <i class="fas fa-eye"></i>
+
+                                    View
+
+                                </button>
+
+
+                                <button
+                                    class="complete-btn"
+                                    type="button"
+                                >
+
+                                    <i class="fas fa-check"></i>
+
+                                    Complete
+
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- ORDER 2 -->
+
+                    <tr>
+
+                        <td>
+
+                            <strong class="order-id">
+                                #1002
+                            </strong>
+
+                        </td>
+
+
+                        <td>
+
+                            <div class="customer-info">
+
+                                <div class="customer-avatar">
+                                    SA
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Sarah Ahmed
+                                    </strong>
+
+                                    <small>
+                                        Customer
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+
+                        <td>
+
+                            <span class="painting-name">
+                                Emerald Falls
+                            </span>
+
+                        </td>
+
+
+                        <td>
+                            UAE
+                        </td>
+
+
+                        <td>
+
+                            <span class="payment-method">
+
+                                <i class="fas fa-building-columns"></i>
+
+                                Bank Transfer
+
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <span class="order-status completed-status">
+                                Completed
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <div class="order-actions">
+
+                                <button
+                                    class="view-btn"
+                                    type="button"
+                                >
+
+                                    <i class="fas fa-eye"></i>
+
+                                    View
+
+                                </button>
+
+
+                                <button
+                                    class="delete-btn"
+                                    type="button"
+                                >
+
+                                    <i class="fas fa-trash"></i>
+
+                                    Delete
+
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+
+
+                    <!-- ORDER 3 -->
+
+                    <tr>
+
+                        <td>
+
+                            <strong class="order-id">
+                                #1003
+                            </strong>
+
+                        </td>
+
+
+                        <td>
+
+                            <div class="customer-info">
+
+                                <div class="customer-avatar">
+                                    JS
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        John Smith
+                                    </strong>
+
+                                    <small>
+                                        Customer
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+
+                        <td>
+
+                            <span class="painting-name">
+                                Japan Street
+                            </span>
+
+                        </td>
+
+
+                        <td>
+                            USA
+                        </td>
+
+
+                        <td>
+
+                            <span class="payment-method">
+
+                                <i class="fab fa-paypal"></i>
+
+                                PayPal
+
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <span class="order-status pending-status">
+                                Pending
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <div class="order-actions">
+
+                                <button
+                                    class="view-btn"
+                                    type="button"
+                                >
+
+                                    <i class="fas fa-eye"></i>
+
+                                    View
+
+                                </button>
+
+
+                                <button
+                                    class="complete-btn"
+                                    type="button"
+                                >
+
+                                    <i class="fas fa-check"></i>
+
+                                    Complete
+
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+
+        <!-- EMPTY STATE -->
+
+        <div
+            id="emptyOrders"
+            class="empty-state"
+            style="display:none;"
+        >
+
+            <i class="fas fa-shopping-bag"></i>
+
+            <h2>No Orders Found</h2>
+
+            <p>
+                No orders match your search.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ==================================================
+                    JAVASCRIPT
+=================================================== -->
+
+<script src="orders.js"></script>
+
+
+</body>
+
+</html>

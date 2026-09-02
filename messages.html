@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Messages | Maha Malik Artwork Admin</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+                    SIDEBAR
+=================================================== -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <img
+            src="../logo.png"
+            alt="Maha Malik Artwork Logo"
+        >
+
+        <h2>Maha Malik</h2>
+
+        <p>Artwork Studio</p>
+
+    </div>
+
+
+    <ul>
+
+        <li>
+            <a href="dashboard.html">
+                <i class="fas fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="paintings.html">
+                <i class="fas fa-image"></i>
+                <span>Paintings</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="add-painting.html">
+                <i class="fas fa-plus-circle"></i>
+                <span>Add Painting</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="orders.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Orders</span>
+            </a>
+        </li>
+
+
+        <li class="active">
+            <a href="messages.html">
+                <i class="fas fa-envelope"></i>
+                <span>Messages</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="users.html">
+                <i class="fas fa-users"></i>
+                <span>Customers</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="settings.html">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="login.html">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </li>
+
+    </ul>
+
+</aside>
+
+
+
+<!-- ==================================================
+                    MAIN CONTENT
+=================================================== -->
+
+<main class="main">
+
+
+    <!-- ==================================================
+                        TOP BAR
+    =================================================== -->
+
+    <div class="topbar">
+
+        <div class="topbar-left">
+
+            <h1>Customer Messages</h1>
+
+            <p>
+                View and manage messages received from your customers.
+            </p>
+
+        </div>
+
+
+        <div class="admin-profile">
+
+            <i class="fas fa-bell"></i>
+
+            <img
+                src="../logo.png"
+                alt="Admin"
+            >
+
+            <div class="admin-name">
+
+                <h3>Admin</h3>
+
+                <p>Artwork Studio</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==================================================
+                    MESSAGE SECTION
+    =================================================== -->
+
+    <section class="section">
+
+
+        <div class="section-title">
+
+            <div>
+
+                <h2>Inbox</h2>
+
+                <p class="section-subtitle">
+                    Customer inquiries and messages
+                </p>
+
+            </div>
+
+
+            <div class="message-count">
+
+                <i class="fas fa-envelope"></i>
+
+                <span id="messageCount">
+                    0 Messages
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================================================
+                        SEARCH
+        =================================================== -->
+
+        <div class="message-toolbar">
+
+            <div class="message-search">
+
+                <i class="fas fa-search"></i>
+
+                <input
+                    type="text"
+                    id="searchMessage"
+                    placeholder="Search by name, email or subject..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================================================
+                        MESSAGE TABLE
+        =================================================== -->
+
+        <div class="table-container">
+
+            <table class="messages-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Customer
+                        </th>
+
+                        <th>
+                            Email
+                        </th>
+
+                        <th>
+                            Subject
+                        </th>
+
+                        <th>
+                            Date
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                        <th>
+                            Actions
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="messageTable">
+
+                    <!-- Messages will be loaded from API -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+
+        <!-- ==================================================
+                        EMPTY MESSAGE
+        =================================================== -->
+
+        <div
+            id="emptyMessages"
+            class="empty-state"
+            style="display:none;"
+        >
+
+            <i class="fas fa-envelope-open-text"></i>
+
+            <h2>No Messages Found</h2>
+
+            <p>
+                There are no messages matching your search.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ==================================================
+                    JAVASCRIPT
+=================================================== -->
+
+<script src="messages.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Users | Maha Malik Artwork Admin</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!--================ SIDEBAR ================-->
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        <h2>Maha Malik</h2>
+
+        <p>Artwork Studio</p>
+
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="dashboard.html">
+                <i class="fas fa-chart-line"></i>
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="paintings.html">
+                <i class="fas fa-image"></i>
+                Paintings
+            </a>
+        </li>
+
+        <li>
+            <a href="add-painting.html">
+                <i class="fas fa-plus-circle"></i>
+                Add Painting
+            </a>
+        </li>
+
+        <li>
+            <a href="orders.html">
+                <i class="fas fa-shopping-cart"></i>
+                Orders
+            </a>
+        </li>
+
+        <li>
+            <a href="messages.html">
+                <i class="fas fa-envelope"></i>
+                Messages
+            </a>
+        </li>
+
+        <li class="active">
+            <a href="users.html">
+                <i class="fas fa-users"></i>
+                Users
+            </a>
+        </li>
+
+        <li>
+            <a href="settings.html">
+                <i class="fas fa-cog"></i>
+                Settings
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+<!--================ MAIN CONTENT ================-->
+
+<div class="main">
+
+    <div class="top-bar">
+
+        <h1>Registered Users</h1>
+
+        <input
+        type="text"
+        id="searchUser"
+        placeholder="Search users...">
+
+    </div>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>User ID</th>
+
+                    <th>Name</th>
+
+                    <th>Email</th>
+
+                    <th>Role</th>
+
+                    <th>Status</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="userTable">
+
+                <tr>
+
+                    <td>U001</td>
+
+                    <td>Maha Malik</td>
+
+                    <td>maha@example.com</td>
+
+                    <td>Administrator</td>
+
+                    <td class="active-user">Active</td>
+
+                    <td>
+
+                        <button class="view">View</button>
+
+                        <button class="delete">Delete</button>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>U002</td>
+
+                    <td>Ali Khan</td>
+
+                    <td>ali@email.com</td>
+
+                    <td>Customer</td>
+
+                    <td class="active-user">Active</td>
+
+                    <td>
+
+                        <button class="view">View</button>
+
+                        <button class="delete">Delete</button>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>U003</td>
+
+                    <td>Sarah Ahmed</td>
+
+                    <td>sarah@email.com</td>
+
+                    <td>Customer</td>
+
+                    <td class="inactive-user">Inactive</td>
+
+                    <td>
+
+                        <button class="view">View</button>
+
+                        <button class="delete">Delete</button>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="users.js"></script>
+
+</body>
+
+</html>

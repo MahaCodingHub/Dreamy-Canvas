@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Add Painting | Admin Panel</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+    background:#f4f6fb;
+}
+
+.container{
+    width:90%;
+    max-width:900px;
+    margin:40px auto;
+}
+
+.page-title{
+    font-size:32px;
+    margin-bottom:25px;
+    color:#222;
+}
+
+form{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.input-group{
+    margin-bottom:20px;
+    display:flex;
+    flex-direction:column;
+}
+
+.input-group label{
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
+
+textarea{
+    resize:vertical;
+    min-height:120px;
+}
+
+button{
+    padding:14px;
+    background:#7b3ff2;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#5f2dd1;
+}
+
+.preview{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+}
+
+.preview img{
+    width:250px;
+    border-radius:12px;
+    display:none;
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+.success{
+    display:none;
+    margin-top:20px;
+    padding:15px;
+    background:#d9ffe3;
+    border:1px solid #00b14f;
+    border-radius:8px;
+    color:#0c6d33;
+    font-weight:600;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 class="page-title">
+    Add New Painting
+</h1>
+
+
+<form id="paintingForm">
+
+
+<!-- =========================================
+     PAINTING TITLE
+========================================= -->
+
+<div class="input-group">
+
+<label for="title">
+    Painting Title
+</label>
+
+<input
+    type="text"
+    id="title"
+    required
+    placeholder="Enter painting title">
+
+</div>
+
+
+<!-- =========================================
+     CATEGORY
+========================================= -->
+
+<div class="input-group">
+
+<label for="category_id">
+    Category
+</label>
+
+<select
+    id="category_id"
+    required>
+
+<option value="">
+    Select Category
+</option>
+
+<option value="1">
+    Landscape
+</option>
+
+<option value="2">
+    Nature
+</option>
+
+<option value="3">
+    Architecture
+</option>
+
+<option value="4">
+    Fantasy
+</option>
+
+<option value="5">
+    Portrait
+</option>
+
+</select>
+
+</div>
+
+
+<!-- =========================================
+     MEDIUM
+========================================= -->
+
+<div class="input-group">
+
+<label for="medium">
+    Medium
+</label>
+
+<input
+    type="text"
+    id="medium"
+    placeholder="Acrylic on Canvas">
+
+</div>
+
+
+<!-- =========================================
+     SIZE
+========================================= -->
+
+<div class="input-group">
+
+<label for="size">
+    Painting Size
+</label>
+
+<input
+    type="text"
+    id="size"
+    placeholder="16 × 20 Inches">
+
+</div>
+
+
+<!-- =========================================
+     PRICE
+========================================= -->
+
+<div class="input-group">
+
+<label for="price">
+    Price
+</label>
+
+<input
+    type="number"
+    id="price"
+    placeholder="Enter painting price"
+    min="0"
+    step="0.01"
+    required>
+
+</div>
+
+
+<!-- =========================================
+     STATUS
+========================================= -->
+
+<div class="input-group">
+
+<label for="status">
+    Status
+</label>
+
+<select
+    id="status"
+    required>
+
+<option value="Available">
+    Available
+</option>
+
+<option value="Sold">
+    Sold
+</option>
+
+<option value="Reserved">
+    Reserved
+</option>
+
+</select>
+
+</div>
+
+
+<!-- =========================================
+     DESCRIPTION
+========================================= -->
+
+<div class="input-group">
+
+<label for="description">
+    Description
+</label>
+
+<textarea
+    id="description"
+    placeholder="Write a description of the painting..."></textarea>
+
+</div>
+
+
+<!-- =========================================
+     STORY
+========================================= -->
+
+<div class="input-group">
+
+<label for="story">
+    Story Behind Painting
+</label>
+
+<textarea
+    id="story"
+    placeholder="Tell the story behind this painting..."></textarea>
+
+</div>
+
+
+<!-- =========================================
+     IMAGE
+========================================= -->
+
+<div class="input-group">
+
+<label for="image">
+    Painting Image
+</label>
+
+<input
+    type="file"
+    id="image"
+    accept="image/*">
+
+</div>
+
+
+<!-- =========================================
+     IMAGE PREVIEW
+========================================= -->
+
+<div class="preview">
+
+<img
+    id="previewImage"
+    src=""
+    alt="Painting Preview">
+
+</div>
+
+
+<!-- =========================================
+     SAVE BUTTON
+========================================= -->
+
+<button type="submit">
+    Save Painting
+</button>
+
+
+<!-- =========================================
+     SUCCESS MESSAGE
+========================================= -->
+
+<div
+    class="success"
+    id="successMessage">
+
+    Painting Saved Successfully!
+
+</div>
+
+
+</form>
+
+</div>
+
+
+<script src="add-painting.js"></script>
+
+</body>
+
+</html>
